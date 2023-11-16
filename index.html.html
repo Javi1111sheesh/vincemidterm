@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <title>My personal Portfolio</title>
+        <style>
+            body { 
+                padding-top: 56px;
+                background-color: rgb(109, 108, 108);
+                background-image: url('img/bg-geometric.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+            }
+            /* ----------------------- NAVBAR ----------------------- */
+            .navbar{
+                padding: 15px;
+                background-color:#4A2C00    ;
+            }
+            .navbar-brand {
+                margin-right: auto;
+                font-size: 20px;
+            }
+            .navbar-nav {
+                margin-left: auto; 
+                font-size: 20px;
+            }
+            /* ----------------------- HOME PAGE ----------------------- */
+            #home {
+                background-image: url('img/bg-sunset.jpg');
+                color: #DAA520  ;
+                background-blend-mode: overlay;
+                background-size: cover;
+                background-position: center 20%;
+                padding: 300px;
+                text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+                font-family: 'Roboto', sans-serif;
+            }
+            #home h3 {
+                color:#F5F5DC ;
+                font-size: 20px;;
+            }
+            .go-down-btn {
+                background-color: #c28f10;
+                color:#181818;
+                margin: 10%;
+                font-size: 20px;
+            }
+            .go-down-btn:hover {
+                background-color: #4A2C00  ;
+            }
+            @media (max-width: 1068px) {
+                #home {
+                    padding: 90px; /* Medium */
+                }
+            }
+            @media (max-width: 476px) {
+                #home {
+                    padding: 80px; /* Small */
+                }
+            }
+            #home h1{
+                font-weight: 700;
+            }
+            /* ----------------------- CARDS FORMAT ----------------------- */
+            .cont-sectionA {
+                background-color: #F5F5DC;
+                padding: 20px;
+                max-width: 90%;
+                border: 2px;
+                border-radius: 20px;
+            }
+            .cont-sectionB {
+                background-color: rgb(240, 172, 70);
+                padding: 20px;
+                max-width: 90%;
+                border: 2px;
+                border-radius: 20px;
+            }
+            /* ----------------------- About Container ----------------------- */
+            #about h2 {
+                font-size: 40px;
+                text-shadow: 2px 2px 3px #4A2C00 ;
+                font-family: 'Roboto', sans-serif;
+            }
+            .col-md-8 p {
+                text-align: center;
+            }
+            .rounded-img {
+                border:3px;
+                border-radius: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .about-text {
+                font-size: 20px;
+            }
+            /* ----------------------- Skills Container ----------------------- */
+            #skills h2 {
+                font-size: 40px;
+                text-shadow: 2px 2px 3px #4A2C00 ;
+                font-family: 'Roboto', sans-serif;
+            }
+            #skills h3 {
+                font-size: 30px;
+                text-shadow: 2px 2px 3px #4A2C00 ;
+                font-family: 'Roboto', sans-serif;
+            }
+            #skills img {
+                height: 50px;
+                width: 50px;
+            }
+            /* ----------------------- Interest Container ----------------------- */
+            #interests h2 {
+                font-size: 40px;
+                text-shadow: 2px 2px 3px #4A2C00 ;
+                font-family: 'Roboto', sans-serif;
+            }
+            .card-body {
+                background-color: #F5F5DC;
+                min-height: 200px; /* Set a minimum height */
+                text-align: center;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .interest-button {
+                text-align: center;   
+            }
+            .watchme-btn{
+                background-color: #c28f10;
+                color: #181818;
+            }
+            .watchme-btn:hover {
+                background-color: #181818;
+                color: #F5F5DC;
+            }
+            /* ----------------------- Contact Container ----------------------- */
+            #contact h2 {
+                font-size: 40px;
+                text-shadow: 2px 2px 3px #4A2C00 ;
+                font-family: 'Roboto', sans-serif;
+            }
+            .socmed-button {
+                text-align: center;
+            }
+            .fb-btn {
+                font-size: 20px;
+            }
+            .fb-btn img{
+                height: 50px;
+                width: 50px;
+            }
+           .email-btn {
+                font-size: 20px;
+           }
+            .email-btn img{
+                height: 70px;
+                width: 70px;
+            }
+            /* ----------------------- Footer ----------------------- */
+            footer {
+                background-color: #4A2C00 ;
+                color: white;
+                padding:1px 0;
+                margin-top: 10px;
+                text-align: center;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            }
+            .go-up-btn {
+                background-color: #c28f10;
+                color:#000000;
+                font-size: 20px;
+            }
+            .go-up-btn:hover{
+                background-color: #F5F5DC     ;
+                color:#4A2C00;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar-brand" href="#home">Vince Martin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#interests">Interests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!------------------------- Header ------------------------->
+        <header class="jumbotron text-center" id="home">
+            <h1 class="display-3">Hi!</h1>
+            <h1 class="display-2 ">I'm<b> Martin</b></h1>
+            <br>
+            <h3>"Hi, I'm Vince, an IT Student passionate on anything. Welcome to my corner of the web!"</h3>
+            <h1 class="display-4"></h1>
+            <div class="button button-container">
+                <a class="btn go-down-btn" href="#contact"><b>Go Down</b></a>
+            </div>
+        </header>
+
+        <!------------------------- About Container ------------------------->
+        <div class="container mt-3 cont-sectionA" id="about">
+            <h2><center><b>About Me</b></center></h2>
+            <div class="row">
+                <div class="col-md-8"><!-- First Column -->
+                    <h3><center><br><br>
+                        I'm <b>Vince Erikson V. Martin</b>, <b>21</b> years old student, 
+                        studying Bachelor of Science in Information Technology <b>(BSIT)</b> in  
+                        Bulacan State Agricultural University <b>(BSAU)</b>.
+                    </center></h3>
+                </div>
+                <div class="col-md-4"><!-- Second Column -->
+                    <img src="img/img/me-pose-face.jpg" class="card-img-top img-fluid rounded-img" style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!------------------------- Skills Container ------------------------->
+        
+        <div class="container mt-3 cont-sectionB" id="skills">
+            <h2><center><b>Skills</b></center></h2>
+            <div class="icons"><center>
+                <a><img src="img/vid-logo.png" alt="icon"> Video Editing</a>
+                <a><img src="img/photo-logo.png" alt="icon"> Picture Editing</a><br><br>
+                <a><img src="img/microsoft-logo.png" style="width: 190px;"> Microsoft Office Tools</a><br><br>
+                <h3>Programming Languages used:</h3><br>
+                <a><img src="img/c++-logo.png" style="width: 70px;">C++</a>
+                <a><img src="img/java-logo.png">Java</a>
+                <a><img src="img/python-logo.png" style="width: 90px;">Python</a>
+                <a><img src="img/html-logo.png">HTML</a>
+                <a><img src="img/css-logo.png">CSS</a></center>
+            </div><br>
+        </div>
+        <div class="container mt-3 cont-sectionA" id="skills">
+            <h2><center><b>Skills</b></center></h2>
+            <div style="text-align: center;">
+                <h2>Edited vid sample</h2>
+                <video controls width="90%" height="500">
+                    <source src="img/vid/vid-date-food.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!------------------------- Interests Container ------------------------->
+        <div class="container mt-3 cont-sectionB" id="interests">
+            <h2><center><b>Interests</b></center></h2>
+            <div class="row">
+                <div class="col-md-4"> <!-- CARD 1 -->
+                    <div class="card photo-card">
+                        <img src="img/img/hobbybadminton.jpg" class="card-img-top img-fluid" style="height: 350px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4>Badminton</h4>
+                            <p class="card-text">I've been playing this sport since i was a kid.</p>
+                            <div class="button interest-button">
+                                <a class="btn watchme-btn" 
+                                    href="https://www.facebook.com/vinceerickson.martin/videos/437706798161784/">
+                                    <b>Watch Me</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- CARD 2 -->
+                    <div class="card photo-card">
+                        <img src="img/img/hobby-cycling.jpg" class="card-img-top img-fluid" style="height: 350px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4>Cycling</h4>
+                            <p class="card-text">I got into Cycling during the pandemic, when it was safer to gop outside.</p>
+                            <div class="button interest-button">
+                                <a class="btn watchme-btn" 
+                                    href="https://www.facebook.com/vinceerickson.martin/videos/474079710649993/">
+                                    <b>Watch Me</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- CARD 3 -->
+                    <div class="card photo-card">
+                        <img src="img/img/hobby-bass.jpg" class="card-img-top img-fluid" style="height: 350px; object-fit: cover;">
+                        <vid></vid>
+                        <div class="card-body">
+                            <h4>Bass</h4>
+                            <p class="card-text">I do Bass when I have free time occacionally.</p>
+                            <div class="button interest-button">
+                                <a class="btn watchme-btn" 
+                                    href="https://www.facebook.com/vinceerickson.martin/videos/1539665523080120/">
+                                    <b>Watch Me</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;"><br>
+                <video controls width="90%" height="500">
+                    <source src="img/vid/vid-bass-sample.mp4" type="video/mp4">
+                </video>
+                <h2>Here, another Bass sample</h2>
+            </div>
+        </div>
+
+        <!------------------------- Contact Container ------------------------->
+        <div class="container mt-3 cont-sectionA" id="contact">
+            <h2><center><b>Contacts</b></center></h2>
+            <div class="button socmed-button">
+                <a class="btn fb-btn" href="https://www.facebook.com/profile.php?id=100080788193299" target="_blank">
+                    <img src="img/fb-logo.png" alt="fb icon"> Vince Martin
+                </a>
+                <a class="btn fb-btn" href="https://www.instagram.com/chenzo.m_/?next=%2F" target="_blank">
+                    <img src="img/ig-logo.png" alt="fb icon"> Chenzo.m_
+                </a>
+                <a class="btn email-btn" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                    <img src="img/email-logo.jpg" alt="fb icon"> vinceericksonmartin.basc@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!------------------------- Footer ------------------------->
+        <footer>
+            <p>&copy; Last updated on Nov. 16, 2023. Thank you!</p>
+            <div class="button-container">
+                <a class="btn go-up-btn" href="#home"><b>Go Up</b></a>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
